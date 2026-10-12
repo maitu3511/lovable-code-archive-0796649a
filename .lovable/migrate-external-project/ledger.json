@@ -1,0 +1,13 @@
+{
+  "source": "code-archive",
+  "capabilities": [
+    {"capability":"Website code and eight pages","source":"Uploaded ZIP src","outcome":"preserve","status":"verified","next_action":"None. Original app files byte-identical; all eight routes return 200 with original content."},
+    {"capability":"Original index.html","source":"Uploaded ZIP index.html","outcome":"preserve","status":"verified","next_action":"None. Original file retained byte-for-byte at project root."},
+    {"capability":"Schema, records, auth identities and authorization","source":"Manifest and application call-site inspection","outcome":"not present","status":"not applicable","next_action":"None. Static company content; no database or authentication."},
+    {"capability":"Images and fonts","source":"Bundled images and original asset pointers","outcome":"preserve","status":"verified in preview","next_action":"None for requested import. Original external image/font dependencies remain unchanged and must stay available."},
+    {"capability":"External providers, contact actions and public media endpoints","source":"Original WhatsApp, mailto, map and asset proxy","outcome":"preserve","status":"verified in preview","next_action":"No changes requested. Contact form generates original WhatsApp handoff with test input; external delivery intentionally not sent. File selection retains original filename-only behavior."},
+    {"capability":"Callbacks, webhooks, schedules and secrets","source":"Manifest and application call-site inspection","outcome":"not present","status":"not applicable","next_action":"None."},
+    {"capability":"Cutover and publication","source":"Not published","outcome":"preserve draft only","status":"not requested","next_action":"No publication or domain changes requested."},
+    {"capability":"Verification","source":"Local preview and source comparison","outcome":"verify","status":"verified","next_action":"None. Eight tests pass; build OK; eight pages render without page errors; lazy images load; quote window and contact handoff checked."}
+  ]
+}
