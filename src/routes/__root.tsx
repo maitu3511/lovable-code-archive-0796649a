@@ -13,6 +13,7 @@ import { useEffect, type ReactNode } from "react";
 import appCss from "../styles.css?url";
 import { WebsiteLayout } from "../components/WebsiteLayout";
 import { reportLovableError } from "../lib/lovable-error-reporting";
+import { taglineLogoUrl } from "../lib/branding";
 
 function NotFoundComponent() {
   return (
@@ -268,7 +269,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         rel: "stylesheet",
         href: appCss || "/src/styles.css",
       },
-      { rel: "icon", href: "/favicon.png?v=monogram", type: "image/png" },
+      { rel: "icon", href: "/favicon.png?v=transparent", type: "image/png" },
       {
         rel: "preconnect",
         href: "https://id-preview--7812fedb-978a-4d3f-b7af-27b541ebd405.lovable.app",
@@ -279,22 +280,14 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         href: "https://id-preview--7812fedb-978a-4d3f-b7af-27b541ebd405.lovable.app",
       },
       {
-        rel: "preload",
-        as: "image",
-        href: "https://id-preview--7812fedb-978a-4d3f-b7af-27b541ebd405.lovable.app/__l5e/assets-v1/f8a846b8-b107-4d85-9641-31b8a5988ca3/hero-machine-working.jpg",
+        rel: "preconnect",
+        href: new URL(taglineLogoUrl).origin,
       },
       {
         rel: "preload",
         as: "image",
-        href: "https://id-preview--7812fedb-978a-4d3f-b7af-27b541ebd405.lovable.app/__l5e/assets-v1/20504afb-05a0-4a0f-9286-acbf8055079a/advay-engineers-logo.jpg",
+        href: taglineLogoUrl,
       },
-      { rel: "preconnect", href: "https://fonts.googleapis.com" },
-      { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
-      {
-        rel: "stylesheet",
-        href: "https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap",
-      },
-      { rel: "stylesheet", href: "https://fonts.cdnfonts.com/css/sansation" },
     ],
   }),
   shellComponent: RootShell,
