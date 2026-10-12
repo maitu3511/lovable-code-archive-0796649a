@@ -271,19 +271,6 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       },
       { rel: "icon", href: "/favicon.png?v=transparent", type: "image/png" },
       {
-        rel: "preconnect",
-        href: "https://id-preview--7812fedb-978a-4d3f-b7af-27b541ebd405.lovable.app",
-        crossOrigin: "anonymous",
-      },
-      {
-        rel: "dns-prefetch",
-        href: "https://id-preview--7812fedb-978a-4d3f-b7af-27b541ebd405.lovable.app",
-      },
-      {
-        rel: "preconnect",
-        href: new URL(taglineLogoUrl).origin,
-      },
-      {
         rel: "preload",
         as: "image",
         href: taglineLogoUrl,
