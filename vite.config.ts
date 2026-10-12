@@ -4,13 +4,11 @@ export default defineConfig({
   tanstackStart: {
     server: { entry: "server" },
   },
-  // Optimize for Netlify deployment while preserving Lovable sandbox defaults
-  nitro: process.env.LOVABLE_SANDBOX === "1" ? {} : {
+  // The Lovable configuration overrides this preset inside its managed builds.
+  // Netlify uses its native function/static output layout. Do not serve the
+  // preserved legacy index.html as a renderer before the TanStack website.
+  nitro: {
     preset: "netlify",
     renderer: false,
-    output: {
-      dir: "dist",
-      publicDir: "dist",
-    }
-  }
+  },
 });
