@@ -1,0 +1,13 @@
+{
+  "source": "code-archive",
+  "capabilities": [
+    {"capability":"Website code and eight pages","source":"Uploaded ZIP src","outcome":"preserve","status":"pending","next_action":"Copy original source byte-for-byte and verify all pages."},
+    {"capability":"Original index.html","source":"Uploaded ZIP index.html","outcome":"preserve","status":"pending","next_action":"Keep original file byte-for-byte at project root."},
+    {"capability":"Schema, records, auth identities and authorization","source":"Manifest and source inspection","outcome":"not detected","status":"pending","next_action":"Confirm relevant application call sites."},
+    {"capability":"Images and fonts","source":"Bundled images and asset pointers","outcome":"preserve","status":"pending","next_action":"Keep original assets and verify rendered media."},
+    {"capability":"External providers, contact actions and public media endpoints","source":"Source inspection","outcome":"preserve","status":"pending","next_action":"Verify original navigation, contact actions and media paths."},
+    {"capability":"Callbacks, webhooks, schedules and secrets","source":"Manifest and source inspection","outcome":"not detected","status":"pending","next_action":"Confirm relevant application call sites."},
+    {"capability":"Cutover and publication","source":"Not published","outcome":"preserve draft only","status":"not requested","next_action":"No publication or domain changes requested."},
+    {"capability":"Verification","source":"Local preview","outcome":"verify","status":"pending","next_action":"Run source tests and check pages and interactions."}
+  ]
+}
