@@ -50,7 +50,15 @@ export const Route = createFileRoute("/")({
           "https://id-preview--7812fedb-978a-4d3f-b7af-27b541ebd405.lovable.app/__l5e/assets-v1/f8a846b8-b107-4d85-9641-31b8a5988ca3/hero-machine-working.jpg",
       },
     ],
-    links: [{ rel: "canonical", href: "https://advayengineers.com/" }],
+    links: [
+      { rel: "canonical", href: "https://advayengineers.com/" },
+      {
+        rel: "preload",
+        as: "image",
+        href: "https://id-preview--7812fedb-978a-4d3f-b7af-27b541ebd405.lovable.app/__l5e/assets-v1/f8a846b8-b107-4d85-9641-31b8a5988ca3/hero-machine-working.jpg",
+        fetchPriority: "high",
+      },
+    ],
   }),
   component: Page,
 });

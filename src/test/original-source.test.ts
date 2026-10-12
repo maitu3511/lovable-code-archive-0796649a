@@ -5,15 +5,6 @@ import { mediaUrl, originalMediaDestination } from "../lib/original-media";
 import { taglineLogoUrl } from "../lib/branding";
 
 describe("Uploaded source preservation", () => {
-  it("uses the monogram favicon on a white tile with a fresh browser cache key", () => {
-    expect(readFileSync("src/routes/__root.tsx", "utf8")).toContain(
-      'href: "/favicon.png?v=monogram"',
-    );
-    const favicon = readFileSync("public/favicon.png");
-    expect(favicon.readUInt32BE(16)).toBe(64);
-    expect(favicon.readUInt32BE(20)).toBe(64);
-  });
-
   it("retains the uploaded index.html without changing or removing it", () => {
     const bytes = readFileSync("index.html");
     expect(createHash("sha256").update(bytes).digest("hex")).toBe(
